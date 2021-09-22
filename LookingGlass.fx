@@ -2,92 +2,64 @@
   LookingGlass by Jared Bienz. Based on the incredible DisplayDepth Fx originally 
   created by CeeJay.dk (with many updates and additions by the Reshade community)
 
-  Visualizes depth on the left and color on the right. Ready to import into HoloPlay Studio.
+  Visualizes color and depth in a format ready to be imported into HoloPlay Studio.
   Use this to configure the depth input preprocessor definitions (RESHADE_DEPTH_INPUT_*).
 */
 
 #include "ReShade.fxh"
 
-uniform int iUIPresentType <
-	ui_type = "combo";
-	ui_label = "Present type";
-	ui_items = "Depth map\0"
-	           "Normal map\0"
-	           "Show both (Vertical 50/50)\0";
-> = 2;
-
 // -- Basic options --
 #if __RESHADE__ >= 40500 // If Reshade version is above or equal to 4.5
 	#if RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN
 		#define UPSIDE_DOWN_HELP_TEXT "RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN is currently set to 1.\n"\
-			"If the Depth map is shown upside down set it to 0."
-		#define iUIUpsideDown 1
+			"If the depth map is upside down, change this to 0."
 	#else
 		#define UPSIDE_DOWN_HELP_TEXT "RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN is currently set to 0.\n"\
-			"If the Depth map is shown upside down set it to 1."
-		#define iUIUpsideDown 0
+			"If the depth map is upside down, change this to 1."
 	#endif
 	
 	#if RESHADE_DEPTH_INPUT_IS_REVERSED
 		#define REVERSED_HELP_TEXT "RESHADE_DEPTH_INPUT_IS_REVERSED is currently set to 1.\n"\
-			"If close objects in the Depth map are bright and far ones are dark set it to 0.\n"\
-			"Also try this if you can see the normals, but the depth view is all black."
-		#define iUIReversed 1
+			"If near objects are dark and far objects are bright, change this to 0."
 	#else
 		#define REVERSED_HELP_TEXT "RESHADE_DEPTH_INPUT_IS_REVERSED is currently set to 0.\n"\
-			"If close objects in the Depth map are bright and far ones are dark set it to 1.\n"\
-			"Also try this if you can see the normals, but the depth view is all black."
-		#define iUIReversed 0
+			"If near objects are dark and far objects are bright, change this to 1."
 	#endif
 	
 	#if RESHADE_DEPTH_INPUT_IS_LOGARITHMIC
 		#define LOGARITHMIC_HELP_TEXT "RESHADE_DEPTH_INPUT_IS_LOGARITHMIC is currently set to 1.\n"\
-			"If the Normal map has banding artifacts (extra stripes) set it to 0."
-		#define iUILogarithmic 1
+			"If the depth map has banding artifacts (extra stripes) change this to 0."
 	#else
 		#define LOGARITHMIC_HELP_TEXT "RESHADE_DEPTH_INPUT_IS_LOGARITHMIC is currently set to 0.\n"\
-			"If the Normal map has banding artifacts (extra stripes) set it to 1."
-		#define iUILogarithmic 0	
+			"If the depth map has banding artifacts (extra stripes) change this to 1."
 	#endif
 
 	uniform int Depth_help <
 		ui_type = "radio"; ui_label = " ";
 		ui_text =
-			"\nThe right settings need to be set in the dialog that opens after clicking the \"Edit global preprocessor definitions\" button above.\n"
-		    "\n"
+			"These settings configure how your screen should appear when taking screenshots for Looking Glass.\n"
+			"\n"
+			"\n"
+			"Using the sliders below, try to achieve a full range of bright white to grey to black. When ready,\n"
+			"make sure to use ReShade to take the screenshot and not the game itself.\n"
+			"\n"
+			"\n"
+			"The settings below are only used while this filter is active, but some global settings will affect.\n"
+			"how screenshots appear. For example:\n"
+			"\n"
+			"\n"
 			UPSIDE_DOWN_HELP_TEXT "\n"
 		    "\n"
 			REVERSED_HELP_TEXT "\n"
 		    "\n"
-			LOGARITHMIC_HELP_TEXT;
+			LOGARITHMIC_HELP_TEXT "\n";
 	>;
 #else // "ui_text" was introduced in ReShade 4.5, so cannot show instructions in older versions
 	uniform bool bUIUseLivePreview <
 		ui_label = "Show live preview";
 		ui_tooltip = "Enable this to show use the preview settings below rather than the saved preprocessor settings.";
 	> = true;
-	
-	uniform int iUIUpsideDown <
-		ui_type = "combo";
-		ui_label = "Upside Down (Preview)";
-		ui_items = "RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN=0\0"
-		           "RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN=1\0";
-	> = RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN;
-	
-	uniform int iUIReversed <
-		ui_type = "combo";
-		ui_label = "Reversed (Preview)";
-		ui_items = "RESHADE_DEPTH_INPUT_IS_REVERSED=0\0"
-		           "RESHADE_DEPTH_INPUT_IS_REVERSED=1\0";
-	> = RESHADE_DEPTH_INPUT_IS_REVERSED;
-	
-	uniform int iUILogarithmic <
-		ui_type = "combo";
-		ui_label = "Logarithmic (Preview)";
-		ui_items = "RESHADE_DEPTH_INPUT_IS_LOGARITHMIC=0\0"
-		           "RESHADE_DEPTH_INPUT_IS_LOGARITHMIC=1\0";
-		ui_tooltip = "Change this setting if the displayed surface normals have stripes in them.";
-	> = RESHADE_DEPTH_INPUT_IS_LOGARITHMIC;
+
 #endif
 
 // -- Advanced options --
@@ -108,36 +80,6 @@ uniform int Advanced_help <
 		ui_tooltip = "Enable this to show use the preview settings below rather than the saved preprocessor settings.";
 	> = true;
 #endif
-
-uniform float2 fUIScale <
-	ui_category = "Advanced settings";
-	ui_type = "drag";
-	ui_label = "Scale (Preview)";
-	ui_tooltip = "Best use 'Present type'->'Depth map' and enable 'Offset' in the options below to set the scale.\n"
-	             "Use these values for:\nRESHADE_DEPTH_INPUT_X_SCALE=<left value>\nRESHADE_DEPTH_INPUT_Y_SCALE=<right value>\n"
-	             "\n"
-	             "If you know the right resolution of the games depth buffer then this scale value is simply the ratio\n"
-	             "between the correct resolution and the resolution Reshade thinks it is.\n"
-	             "For example:\n"
-	             "If it thinks the resolution is 1920 x 1080, but it's really 1280 x 720 then the right scale is (1.5 , 1.5)\n"
-	             "because 1920 / 1280 is 1.5 and 1080 / 720 is also 1.5, so 1.5 is the right scale for both the x and the y";
-	ui_min = 0.0; ui_max = 2.0;
-	ui_step = 0.001;
-> = float2(RESHADE_DEPTH_INPUT_X_SCALE, RESHADE_DEPTH_INPUT_Y_SCALE);
-
-uniform int2 iUIOffset <
-	ui_category = "Advanced settings"; 
-	ui_type = "drag";
-	ui_label = "Offset (Preview)";
-	ui_tooltip = "Best use 'Present type'->'Depth map' and enable 'Offset' in the options below to set the offset in pixels.\n"
-	             "Use these values for:\nRESHADE_DEPTH_INPUT_X_PIXEL_OFFSET=<left value>\nRESHADE_DEPTH_INPUT_Y_PIXEL_OFFSET=<right value>";
-	ui_step = 1;
-> = int2(RESHADE_DEPTH_INPUT_X_PIXEL_OFFSET, RESHADE_DEPTH_INPUT_Y_PIXEL_OFFSET);
-
-uniform bool bUIShowOffset <
-	ui_category = "Advanced settings";
-	ui_label = "Blend Depth map into the image (to help with finding the right offset)";
-> = false;
 
 uniform float fUIFarPlane <
 	ui_category = "Advanced settings"; 
@@ -167,21 +109,16 @@ float GetLinearizedDepth(float2 texcoord)
 	}
 	else
 	{
-		if (iUIUpsideDown) // RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN
+		if (RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN)
 			texcoord.y = 1.0 - texcoord.y;
-
-		texcoord.x /= fUIScale.x; // RESHADE_DEPTH_INPUT_X_SCALE
-		texcoord.y /= fUIScale.y; // RESHADE_DEPTH_INPUT_Y_SCALE
-		texcoord.x -= iUIOffset.x * BUFFER_RCP_WIDTH; // RESHADE_DEPTH_INPUT_X_PIXEL_OFFSET
-		texcoord.y += iUIOffset.y * BUFFER_RCP_HEIGHT; // RESHADE_DEPTH_INPUT_Y_PIXEL_OFFSET
 
 		float depth = tex2Dlod(ReShade::DepthBuffer, float4(texcoord, 0, 0)).x * fUIDepthMultiplier;
 
 		const float C = 0.01;
-		if (iUILogarithmic) // RESHADE_DEPTH_INPUT_IS_LOGARITHMIC
+		if (RESHADE_DEPTH_INPUT_IS_LOGARITHMIC)
 			depth = (exp(depth * log(C + 1.0)) - 1.0) / C;
 
-		if (iUIReversed) // RESHADE_DEPTH_INPUT_IS_REVERSED
+		if (RESHADE_DEPTH_INPUT_IS_REVERSED)
 			depth = 1.0 - depth;
 
 		const float N = 1.0;
@@ -191,37 +128,38 @@ float GetLinearizedDepth(float2 texcoord)
 	}
 }
 
-float3 GetScreenSpaceNormal(float2 texcoord)
+void CenterView(inout float4 position : SV_Position, inout float2 texcoord : TEXCOORD, out float half_buffer)
 {
-	float3 offset = float3(BUFFER_PIXEL_SIZE, 0.0);
-	float2 posCenter = texcoord.xy;
-	float2 posNorth  = posCenter - offset.zy;
-	float2 posEast   = posCenter + offset.xz;
-
-	float3 vertCenter = float3(posCenter - 0.5, 1) * GetLinearizedDepth(posCenter);
-	float3 vertNorth  = float3(posNorth - 0.5,  1) * GetLinearizedDepth(posNorth);
-	float3 vertEast   = float3(posEast - 0.5,   1) * GetLinearizedDepth(posEast);
-
-	return normalize(cross(vertCenter - vertNorth, vertCenter - vertEast)) * 0.5 + 0.5;
+	// Calculate half and quarter buffer width
+	half_buffer = BUFFER_WIDTH * 0.5;
+	float quarter_buffer = half_buffer * 0.5;
+	
+	// Force to use the left side of the view only
+	if (position.x <= half_buffer)
+	{
+		position.x = position.x + quarter_buffer;
+		texcoord.x = texcoord.x + 0.25;
+	}
+	else
+	{
+		position.x = (position.x - half_buffer) + quarter_buffer;
+		texcoord.x = (texcoord.x - 0.5) + 0.25;	
+	}
 }
 
 void PS_DisplayDepth(in float4 position : SV_Position, in float2 texcoord : TEXCOORD, out float3 color : SV_Target)
 {
 	// Save the original x
 	float original_x = position.x;
+
+	// Place to recieve half buffer
+	float half_buffer = 0;
 	
-	// Calculate half buffer width
-	float half_buffer = BUFFER_WIDTH * 0.5;
+	// Center the viewport
+	CenterView(position, texcoord, half_buffer);
 
-	// Force to use the left side of the view only
-	if (position.x > half_buffer)
-	{
-		position.x = position.x - half_buffer;
-		texcoord.x = texcoord.x - 0.5;
-	}
-
+	// Calculate depth and normal
 	float3 depth = 1.0 - GetLinearizedDepth(texcoord).xxx; // Invert since LookingGlass wants white as close
-	float3 normal = GetScreenSpaceNormal(texcoord);
 
 	// Ordered dithering
 #if 1
@@ -240,18 +178,8 @@ void PS_DisplayDepth(in float4 position : SV_Position, in float2 texcoord : TEXC
 	// Get the original color at this position
 	float3 color_orig = tex2D(ReShade::BackBuffer, texcoord).rgb;
 
-	color = depth;
-	if (iUIPresentType == 1)
-		// ORIG: color = normal;
-		color = color_orig;
-	if (iUIPresentType == 2)
-		color = lerp(depth, color_orig, step(half_buffer, original_x));
-
-	if (bUIShowOffset)
-	{
-		// Blend depth and back buffer color with 'overlay' so the offset is more noticeable
-		color = lerp(2 * color * color_orig, 1.0 - 2.0 * (1.0 - color) * (1.0 - color_orig), max(color.r, max(color.g, color.b)) < 0.5 ? 0.0 : 1.0);
-	}
+	// Show split color and depth
+	color = lerp(color_orig, depth, step(half_buffer, original_x));
 }
 
 technique LookingGlass <
