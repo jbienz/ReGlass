@@ -15,7 +15,7 @@ There are several reasons why I chose [ReShade](https://reshade.me):
 
 
 ## Automatic Installation
-1. Download ReShade from [reshade.me](https://reshade.me)
+1. Download ReShade from [reshade.me](https://reshade.me).
 1. During the ReShade installation, paste in the following URL:
 
     > `https://github.com/jbienz/ReGlass/releases/download/v1.0/ReGlass.zip`
@@ -39,3 +39,6 @@ Check the box next to LookinGlass, then use the sliders to achieve the desired d
 
 - For wide open shots like skylines: Use large values for **Far Importance** (800+) and small values for **Multiplier** (1-2).
 - For narrow shots like selfies: Use very small values for **Far Importance** (0.1 - 0.5) and large values for **Multiplier** (50-200).
+
+## Questions?
+I'm not always online, but my user name is **eXntrc** on the [Looking Glass Discord](https://discord.com/invite/lookingglassfactory).
