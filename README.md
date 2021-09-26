@@ -1,5 +1,5 @@
 # ReGlass
-ReGlass is a ReShade FX shader that enables 3D screenshots for LookingGlass Portrait.
+ReGlass is a ReShade FX shader that enables 3D screenshots for Looking Glass Portrait.
 
 [![](Doc/Images/VideoPreview.png)](https://youtu.be/YKgHC-UgFOY)
 [Watch the video](https://youtu.be/YKgHC-UgFOY)
@@ -11,7 +11,7 @@ There are several reasons why I chose [ReShade](https://reshade.me):
 - ReShade works with a *massive* [list of games](https://reshade.me/compatibility), and more than 500 of them support depth.
 - ReShade has an incredible community with ~15k members and ~4k active at any given time.
 - The community is constantly adding new games, and if an update breaks an existing game it's addressed quickly.
-- ReShade is easy to develop for with many public samples.
+- ReShade is easy to develop on with many public samples.
 - It offers an in-game UI that enables users to get exactly the right shot. 
 
 
