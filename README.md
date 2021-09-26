@@ -51,7 +51,7 @@ Press the 'Edit global preprocessor definitions' button.
 
 <img src="Doc/Images/PreProcButton.png" width=600>
 
-Change `RESHADE_DEPTH_INPUT_REVERSED` from 0 to 1 or from 1 to 0
+Change `RESHADE_DEPTH_INPUT_IS_REVERSED` from 0 to 1 or from 1 to 0
 
 <img src="Doc/Images/DeptheReversed.png" width=400>
 
