@@ -1,5 +1,5 @@
 # ReGlass
-ReGlass is a ReShade FX filter that enables 3D screenshots for LookingGlass Portrait.
+ReGlass is a ReShade FX shader that enables 3D screenshots for LookingGlass Portrait.
 
 [![](Doc/Images/VideoPreview.png)](https://youtu.be/YKgHC-UgFOY)
 [Watch the video](https://youtu.be/YKgHC-UgFOY)
