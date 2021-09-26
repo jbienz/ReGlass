@@ -41,5 +41,33 @@ Check the box next to LookinGlass, then use the sliders to achieve the desired d
 - For wide open shots like skylines: Use large values for **Far Importance** (800+) and small values for **Multiplier** (1-2).
 - For narrow shots like selfies: Use very small values for **Far Importance** (0.1 - 0.5) and large values for **Multiplier** (50-200).
 
+## Troubleshooting
+
+Here are some of the most common issues:
+
+### Depth is always black or is inverted
+
+Press the 'Edit global preprocessor definitions' button.
+
+<img src="Doc/Images/PreProcButton.png" width=600>
+
+Change `RESHADE_DEPTH_INPUT_REVERSED` from 0 to 1 or from 1 to 0
+
+<img src="Doc/Images/DeptheReversed.png" width=400>
+
+Then click somewhere else to leave the popup.
+
+### Depth is always white
+
+Change the Multiplier to be 1.0 or less.
+
+<img src="Doc/Images/EditMulti.png" width=600>
+
+### Other issues
+
+When troubleshooting it can be helpful to turn OFF the **LookingGlass** shader and turn ON the **DisplayDepth** shader. Just keep in mind that by default ReShade depth is inverted compared to Looking Glass (black is close and white is far).
+
+For additional help, watch this [ReShade Depth Tutorial](https://www.youtube.com/watch?v=52KZrMOo4Y8) by Daemon White.
+
 ## Questions?
 I'm not always online, but my user name is **eXntrc** on the [Looking Glass Discord](https://discord.com/invite/lookingglassfactory).
