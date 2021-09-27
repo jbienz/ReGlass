@@ -12,7 +12,7 @@ ReGlass draws the game with color on one side and depth on the other. If a scree
 
 
 ## Why ReShade?
-There are several reasons why I chose [ReShade](https://reshade.me):
+There are several reasons why [ReShade](https://reshade.me) was chosen:
 
 - ReShade works with a *massive* [list of games](https://reshade.me/compatibility), and more than 500 of them support depth.
 - ReShade has an incredible community with ~15k members and ~4k active at any given time.
@@ -44,13 +44,13 @@ Check the box next to LookinGlass, then use the sliders to achieve the desired d
 
 <img src="Doc/Images/Config.png" width=600>
 
-- For wide open shots like skylines: Use large values for **Far Importance** (800+) and small values for **Multiplier** (1-2).
-- For narrow shots like selfies: Use very small values for **Far Importance** (0.1 - 0.5) and large values for **Multiplier** (50-200).
+- **Wide open shots like skylines:** Use large values for **Far Importance** (800+) and small values for **Multiplier** (1-2).
+- **Narrow shots like selfies:** Use very small values for **Far Importance** (0.1 - 0.5) and large values for **Multiplier** (50-200).
 
 ## Compatibility
 What if a game on the [compatibility list](https://reshade.me/compatibility) mentions depth buffer issues? 
 
-If a game appears to have serious issues I didn't include it in the "500+ supported games". Here are the issues mentioned on the list and the behavior I'd expect from them:
+If a game appears to have serious issues it wasn't coutned in the "500+ supported games". Here are the issues mentioned in the list and the behavior you might expect from them:
 
 - **No depth buffer access -** Everything will appear flat and in the background. (Not Counted)
 - **Depth buffer is empty -** Same as above. (Not Counted)
@@ -61,7 +61,7 @@ If a game appears to have serious issues I didn't include it in the "500+ suppor
 - **Partial depth buffer access -** Unclear but depends on the game. Might be like the hands example above. Might not work at all. (Not Counted)
 - **Depth buffer flickers -** Will probably work, but you may have to take several screenshots before you get one with depth. (Counted)
 - **XYZ (e.g. trees) missing from depth buffer -** Everything BUT XYZ will look OK. XYZ will appear flat and in the background. (Not Counted)
-- **Depth buffer access only in menu** - May or may not work depending on where the menu is displayed. When my shader is enabled I only show the center 50% of the screen. If the menu is on the left or right side, you might be OK. If it's in the middle of the screen, it'll be in the way. (Not Counted)  
+- **Depth buffer access only in menu** - May or may not work depending on where the menu is displayed. When the shader is enabled only the center 50% of the screen is displayed. If the menu is on the left or right side, you might be OK. If it's in the middle of the screen, it'll be in the way. (Not Counted)  
 
 ## Troubleshooting
 
