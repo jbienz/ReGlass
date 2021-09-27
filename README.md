@@ -1,5 +1,5 @@
 # ReGlass
-ReGlass is a 3D screenshot and video capture tool for [Looking Glass Portrait](https://lookingglassfactory.com/portrait) that works with more than 500 games.
+ReGlass is a 3D screenshot and video capture tool for [Looking Glass Portrait](https://lookingglassfactory.com/portrait). It works with more than 500 games.
 
 [![](Doc/Images/VideoPreview.png)](https://youtu.be/YKgHC-UgFOY)
 [Watch the video](https://youtu.be/YKgHC-UgFOY)
