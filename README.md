@@ -1,11 +1,17 @@
 # ReGlass
-ReGlass is a ReShade FX shader that enables 3D screenshots for [Looking Glass Portrait](https://lookingglassfactory.com/portrait).
+ReGlass is a ReShade FX shader that enables 3D screenshots and video capture for [Looking Glass Portrait](https://lookingglassfactory.com/portrait).
 
 [![](Doc/Images/VideoPreview.png)](https://youtu.be/YKgHC-UgFOY)
 [Watch the video](https://youtu.be/YKgHC-UgFOY)
 
-## Why ReShade?
 
+# How does it work?
+ReGlass draws the game with color on one side and depth on the other. If a screenshot is taken or a video captured, it can be imported into [HoloPlay Studio](https://docs.lookingglassfactory.com/3d-viewers/holoplay-studio) as a [RGB-D Photo or Video](https://docs.lookingglassfactory.com/3d-viewers/holoplay-studio/rgbd-photo-video). 
+
+**NOTE:** When taking screenshots or capturing video, don't use screenshot or capture facilities built into the game. This is because the game isn't aware of ReShade and won't include the depth information. Instead, you can use the screenshot feature in ReShade (usually PrintScreen) or external tools like the Windows Game Bar (Win + G) or NVIDIA Overlay (Alt + Z).
+
+
+## Why ReShade?
 There are several reasons why I chose [ReShade](https://reshade.me):
 
 - ReShade works with a *massive* [list of games](https://reshade.me/compatibility), and more than 500 of them support depth.
@@ -55,7 +61,7 @@ If a game appears to have serious issues I didn't include it in the "500+ suppor
 - **Partial depth buffer access -** Unclear but depends on the game. Might be like the hands example above. Might not work at all. (Not Counted)
 - **Depth buffer flickers -** Will probably work, but you may have to take several screenshots before you get one with depth. (Counted)
 - **XYZ (e.g. trees) missing from depth buffer -** Everything BUT XYZ will look OK. XYZ will appear flat and in the background. (Not Counted)
-- **Depth buffer access only in menu** - May or may not work depending on where the menu is displayed. When my shader is enabled I only show the center 1/3rd of the screen. If the menu is on the left or right side, you might be OK. If it's in the middle of the screen, it'll be in the way. (Not Counted)  
+- **Depth buffer access only in menu** - May or may not work depending on where the menu is displayed. When my shader is enabled I only show the center 50% of the screen. If the menu is on the left or right side, you might be OK. If it's in the middle of the screen, it'll be in the way. (Not Counted)  
 
 ## Troubleshooting
 
