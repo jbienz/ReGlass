@@ -25,7 +25,7 @@ There are several reasons why [ReShade](https://reshade.me) was chosen:
 1. Download ReShade from [reshade.me](https://reshade.me).
 1. During the ReShade installation, paste in the following URL:
 
-    > `https://github.com/jbienz/ReGlass/releases/download/v1.0/ReGlass.zip`
+    > `https://github.com/jbienz/ReGlass/releases/download/v1.1/ReGlass.zip`
 1. Click the 'Add' button to add the archive, then click OK to finish the installation.
 
 <img src="Doc/Images/ReShadeArchive.png" width=600>
