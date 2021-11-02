@@ -32,7 +32,7 @@ There are several reasons why [ReShade](https://reshade.me) was chosen:
 
 ## Manual Installation
 1. Install ReShade from [reshade.me](https://reshade.me) and enable it for your game.
-1. Download the latest [ReGlass Archive](https://github.com/jbienz/ReGlass/releases/download/v1.0/ReGlass.zip).
+1. Download the latest [ReGlass Archive](https://github.com/jbienz/ReGlass/releases/download/v1.1/ReGlass.zip).
 1. Go to the same folder as your games main executable.
 1. Go into the sub-folder `reshade-shaders`.
 1. Extract the `Shaders` folder from the zip file into the games `reshade-shaders` folder, merging with the `Shaders` folder that already exists.
