@@ -1,6 +1,9 @@
 /*
   LookingGlass by Jared Bienz. Based on the incredible DisplayDepth Fx originally 
-  created by CeeJay.dk (with many updates and additions by the Reshade community)
+  created by CeeJay.dk (with many updates and additions by the Reshade community).
+  Version 1.1 also now leverages GaussianBlur by Ioxa to smooth out the depth map. 
+  
+  Thank you!
 
   Visualizes color and depth in a format ready to be imported into HoloPlay Studio.
 */
@@ -82,26 +85,26 @@ uniform float fUIDepthMultiplier <
 uniform int GaussianBlurRadius <
 	ui_type = "drag";
 	ui_label = "Blur Radius";
-	ui_tooltip = "Adjusts the blur radius. Higher values increase the radius";
+	ui_tooltip = "How many neighboring pixels influence the original pixel.";
 	ui_min = 0.0; ui_max = 4.0;
 	ui_step = 1.0;
-> = 3;
-
-uniform float GaussianBlurOffset <
-	ui_type = "drag";
-	ui_label = "Blur Offset";
-	ui_tooltip = "Additional adjustment for the blur radius. Values less than 1.00 will reduce the radius.";
-	ui_min = 0.00; ui_max = 1.00;
-	ui_step = 0.1;
-> = 0.4;
+> = 4;
 
 uniform float GaussianBlurStrength <
 	ui_type = "drag";
 	ui_label = "Blur Strength";
-	ui_tooltip = "Adjusts the strength of the blur.";
+	ui_tooltip = "How strongly do neighboring pixels influence the original pixel.";
 	ui_min = 0.00; ui_max = 1.00;
-	ui_step = 0.1;
+	ui_step = 0.001;
 > = 1.000;
+
+uniform float GaussianBlurOffset <
+	ui_type = "drag";
+	ui_label = "Blur Offset";
+	ui_tooltip = "Can be used to fine-tune the 'crispness' of the edge.";
+	ui_min = 0.00; ui_max = 2.00;
+	ui_step = 0.001;
+> = 0.5;
 
 // -- Variables --
 
