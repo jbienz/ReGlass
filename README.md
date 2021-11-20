@@ -113,15 +113,31 @@ Then click somewhere else to leave the popup.
 
 ### Depth is always white
 
-Some games work best with a Multiplier of 1.0 or less.
+#### Multiplier issues
+
+Some games work best with a Multiplier of 1.0 or less. Other games, like Half-Life 2, only work with a multiplier of *exactly* 1.0.
 
 <img src="Doc/Images/EditMulti.png" width=600>
+
+#### MSAA
+
+Multisample anti-aliasing (MSAA) is known to cause problems with ReShade depth. If your game supports MSAA, try turning it off.
+
+#### Depth buffer clearing
+
+Some games, like Half-Life 2, clear the depth buffer each time they clear the frame. ReShade offers a setting to make a full copy of the depth buffer before the frame is cleared. You can find this setting on the the last tab in ReShade. It's the tab with the name of the graphics API used by the game (e.g. **D3D9**, **DX11**).
+
+<img src="Doc/Images/CopyDepthBeforeClear.png">
+
+### Depth works in single player or campaign but not in online multiplayer
+
+ReShade intentionally disables depth buffer access for online play. This is to keep bots from using the depth buffer to cheat. Unfortunately, ReGlass will only work in offline mode for these games.
 
 ### Other issues
 
 When troubleshooting it can be helpful to turn OFF the **LookingGlass** shader and turn ON the **DisplayDepth** shader. Just keep in mind that by default ReShade depth is inverted compared to Looking Glass (black is close and white is far).
 
-For additional help, watch this [ReShade Depth Tutorial](https://www.youtube.com/watch?v=52KZrMOo4Y8) by Daemon White.
+For additional help I recommend watching the [ReShade Depth Tutorial](https://www.youtube.com/watch?v=52KZrMOo4Y8) by Daemon White. Also, the [Depth Buffer Guide](https://github.com/martymcmodding/ReShade-Guide/wiki/The-Depth-Buffer) by martymcmodding is quite helpful. 
 
 ## Thanks
 
