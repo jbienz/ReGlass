@@ -79,22 +79,6 @@ This again is *very* difficult for HoloPlay Studio. The sharp contrast between t
 
 Smooth transition means far less tearing.
 
-## Compatibility
-What if a game on the [compatibility list](https://reshade.me/compatibility) mentions depth buffer issues? 
-
-If a game appears to have serious issues it wasn't coutned in the "500+ supported games". Here are the issues mentioned in the list and the behavior you might expect from them:
-
-- **No depth buffer access -** Everything will appear flat and in the background. (Not Counted)
-- **Depth buffer is empty -** Same as above. (Not Counted)
-- **Depth buffer only shows XYZ (e.g. hands) -** Only XYZ will "pop out". Everything else will be flat and in the background. (Not Counted)
-- **Depth buffer is flipped -** No problem. Just configure ReShade accordingly. (Counted)
-- **Game uses a logarithmic depth buffer -** No problem. Just configure ReShade accordingly. (Counted)
-- **Use game in offline mode -** ReShade disables depth in multiplayer because bots can use it for cheating. Offline supported. (Counted)
-- **Partial depth buffer access -** Unclear but depends on the game. Might be like the hands example above. Might not work at all. (Not Counted)
-- **Depth buffer flickers -** Will probably work, but you may have to take several screenshots before you get one with depth. (Counted)
-- **XYZ (e.g. trees) missing from depth buffer -** Everything BUT XYZ will look OK. XYZ will appear flat and in the background. (Not Counted)
-- **Depth buffer access only in menu** - May or may not work depending on where the menu is displayed. When the shader is enabled only the center 50% of the screen is displayed. If the menu is on the left or right side, you might be OK. If it's in the middle of the screen, it'll be in the way. (Not Counted)  
-
 ## Troubleshooting
 
 Here are some of the most common issues:
@@ -138,6 +122,22 @@ ReShade intentionally disables depth buffer access for online play. This is to k
 When troubleshooting it can be helpful to turn OFF the **LookingGlass** shader and turn ON the **DisplayDepth** shader. Just keep in mind that by default ReShade depth is inverted compared to Looking Glass (black is close and white is far).
 
 For additional help I recommend watching the [ReShade Depth Tutorial](https://www.youtube.com/watch?v=52KZrMOo4Y8) by Daemon White. Also, the [Depth Buffer Guide](https://github.com/martymcmodding/ReShade-Guide/wiki/The-Depth-Buffer) by martymcmodding is quite helpful. 
+
+## Compatibility
+What if a game on the [compatibility list](https://reshade.me/compatibility) mentions depth buffer issues? 
+
+If a game appears to have serious issues it wasn't coutned in the "500+ supported games". Here are the issues mentioned in the list and the behavior you might expect from them:
+
+- **No depth buffer access -** Everything will appear flat and in the background. (Not Counted)
+- **Depth buffer is empty -** Same as above. (Not Counted)
+- **Depth buffer only shows XYZ (e.g. hands) -** Only XYZ will "pop out". Everything else will be flat and in the background. (Not Counted)
+- **Depth buffer is flipped -** No problem. Just configure ReShade accordingly. (Counted)
+- **Game uses a logarithmic depth buffer -** No problem. Just configure ReShade accordingly. (Counted)
+- **Use game in offline mode -** ReShade disables depth in multiplayer because bots can use it for cheating. Offline supported. (Counted)
+- **Partial depth buffer access -** Unclear but depends on the game. Might be like the hands example above. Might not work at all. (Not Counted)
+- **Depth buffer flickers -** Will probably work, but you may have to take several screenshots before you get one with depth. (Counted)
+- **XYZ (e.g. trees) missing from depth buffer -** Everything BUT XYZ will look OK. XYZ will appear flat and in the background. (Not Counted)
+- **Depth buffer access only in menu** - May or may not work depending on where the menu is displayed. When the shader is enabled only the center 50% of the screen is displayed. If the menu is on the left or right side, you might be OK. If it's in the middle of the screen, it'll be in the way. (Not Counted)  
 
 ## Thanks
 
