@@ -78,7 +78,7 @@ This again is *very* difficult for HoloPlay Studio. The sharp contrast between t
 Smooth transition means far less tearing.
 
 ## How do I make it work with XYZ game?
-Start with the [Game Settings](GameSettings.md) page to see if your game is already listed. Next, check the [Game Settings Discussion][GameSettingsDisc] thread. Finally, see the [Find Settings](FindSettings.md) page to learn how to configure ReGlass for a new game.
+First, start with the [Game Settings](GameSettings.md) page to see if your game is already listed. Next, check the [Game Settings Discussion][GameSettingsDisc] thread. Finally, see the [Find Settings](FindSettings.md) page to learn how to configure ReGlass for a new game.
 
 ## Thanks
 Special thanks to Ioxa and Otakumouse for their [GaussianBlur shader](https://github.com/Otakumouse/stormshade/blob/master/v4.X/reshade-shaders/Shader%20Library/Recommended/GaussianBlur.fx), which was modified and embedded in this shader to enable blurring the depth map.
