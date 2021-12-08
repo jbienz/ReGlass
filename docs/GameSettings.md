@@ -4,6 +4,16 @@ This page includes the settings necessary to get ReGlass working with various ga
 ## Games
 
 <table>
+  <colgroup>
+    <col>
+    <col style="background-color:cyan">
+	<col style="background-color:magenta">
+	<col style="background-color:red">
+	<col style="background-color:green">
+	<col style="background-color:blue">
+	<col style="background-color:orange">
+	<col style="background-color:purple">
+  </colgroup>
   <tr>
     <th>Game</th>
     <th width="12%">API</th>
@@ -25,7 +35,7 @@ This page includes the settings necessary to get ReGlass working with various ga
 	<td>0.1 - 200</td>
   </tr>
   <tr>
-    <td colspan="7"><b>Skylines:</b> Far Importance 800+, Multiplier 1-2. <b>Close-ups:</b> Far Importance 0.1-0.5, Multiplier 50-200.</td>
+    <td colspan="7"><b>Skylines:</b> Far Importance 800+, Multiplier 1 - 2. <b>Close-ups:</b> Far Importance 0.2 - 0.5, Multiplier 50 - 200.</td>
   </tr>
   <tr>
 	<td rowspan="2">Half-Life 2</td>
@@ -38,7 +48,7 @@ This page includes the settings necessary to get ReGlass working with various ga
 	<td>**1.0**</td>
   </tr>
   <tr>
-    <td colspan="7">Multiplier must be <i>exactly</i> <b>1.0</b> or the depth will always be white. This limits dynamic range.</td>
+    <td colspan="7">Multiplier must be <i>exactly</i> <b>1.0</b> or the depth will always be white. Because of this, HL2 has somewhat limited dynamic range.</td>
   </tr>
   <tr>
 	<td rowspan="2">Halo Master Chief Collection</td>
