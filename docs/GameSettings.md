@@ -1,6 +1,8 @@
 # Game Settings
 This page includes the settings necessary to get ReGlass working with various games. If the game you want to play isn't in the list below, check the [Game Settings Discussion][GameSettingsDisc] to see if anyone there has found them. Finally, you can visit the [Find Settings](FindSettings.md) page to learn how to figure these settings for yourself.
 
+## Games
+
 <table>
   <tr>
     <th>Game</th>
@@ -53,14 +55,17 @@ This page includes the settings necessary to get ReGlass working with various ga
   </tr>
 </table>
 
+## API
 **API** is selected during ReShade installation for the game. ReShade won't always ask for this so if you don't see it during installation you can ignore this column.
 
 <img src="Images/APISelection.png" width=500>
 
+## Copy Before Clear
 **Copy Before Clear** is set on the the last tab in ReShade. This tab will have the same name as the API (for example **D3D9**, **D3D11**, etc.)
 
 <img src="Images/CopyDepthBeforeClear.png">
 
+## Upside Down, Reversed, Logarithmic
 To change **Upside Down**, **Reversed** or **Logarithmic**, click *Edit global preprocessor definitions*,
 
 <img src="Images/PreProcButton.png" width=600>
@@ -70,4 +75,3 @@ then use the popup to set these values.
 <img src="Images/GlobalSettings.png" width=400>
 
 [GameSettingsDisc]: https://github.com/jbienz/ReGlass/discussions/2 "Games Setting Discussion"
-
