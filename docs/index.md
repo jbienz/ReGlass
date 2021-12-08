@@ -42,7 +42,7 @@ There are several reasons why [ReShade](https://reshade.me) was chosen:
 ### Depth Settings
 Once installed, launch the game and press 'Home' on your keyboard to bring up the ReShade menu.
 
-Check the box next to LookinGlass, then use the sliders to achieve the desired depth:
+Check the box next to LookingGlass, then use the sliders to achieve the desired depth:
 
 <img src="Images/MainSettings.png" width=600>
 
