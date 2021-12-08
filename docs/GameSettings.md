@@ -7,12 +7,12 @@ This page includes the settings necessary to get ReGlass working with various ga
   <colgroup>
     <col>
     <col>
-	<col style="background-color:magenta">
-	<col style="background-color:red">
-	<col style="background-color:green">
-	<col style="background-color:blue">
-	<col style="background-color:orange">
-	<col style="background-color:purple">
+	<col style="background-color:#737373">
+	<col style="background-color:#6e000f">
+	<col style="background-color:#006e1a">
+	<col style="background-color:#02006e">
+	<col style="background-color:#006e66">
+	<col style="background-color:#00616e">
   </colgroup>
   <tr>
     <th>Game</th>
@@ -45,7 +45,7 @@ This page includes the settings necessary to get ReGlass working with various ga
 	<td>0</td>
 	<td>0</td>
 	<td>1.0 - 350</td>
-	<td>**1.0**</td>
+	<td><b>1.0</b></td>
   </tr>
   <tr>
     <td colspan="7">Multiplier must be <i>exactly</i> <b>1.0</b> or the depth will always be white. Because of this, HL2 has somewhat limited dynamic range.</td>
