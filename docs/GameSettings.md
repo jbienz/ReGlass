@@ -3,7 +3,7 @@ This page includes the settings necessary to get ReGlass working with various ga
 
 <table>
   <tr>
-    <th>Game</td>
+    <th>Game</th>
     <th width="12%">API</th>
 	<th width="12%">Copy Before Clear</th>
 	<th width="12%">Upside Down</th>
