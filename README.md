@@ -1,7 +1,7 @@
 # ReGlass
 ReGlass is a 3D screenshot and video capture tool for [Looking Glass Portrait](https://lookingglassfactory.com/portrait). It works with more than 500 games.
 
-[![](Doc/Images/VideoPreview.png)](https://youtu.be/YKgHC-UgFOY)
+[![](docs/Images/VideoPreview.png)](https://youtu.be/YKgHC-UgFOY)
 [Watch the video](https://youtu.be/YKgHC-UgFOY)
 
 
@@ -28,7 +28,7 @@ There are several reasons why [ReShade](https://reshade.me) was chosen:
     > `https://github.com/jbienz/ReGlass/releases/download/v1.1/ReGlass.zip`
 1. Click the 'Add' button to add the archive, then click OK to finish the installation.
 
-<img src="Doc/Images/ReShadeArchive.png" width=600>
+<img src="docs/Images/ReShadeArchive.png" width=600>
 
 ## Manual Installation
 1. Install ReShade from [reshade.me](https://reshade.me) and enable it for your game.
@@ -44,7 +44,7 @@ Once installed, launch the game and press 'Home' on your keyboard to bring up th
 
 Check the box next to LookinGlass, then use the sliders to achieve the desired depth:
 
-<img src="Doc/Images/MainSettings.png" width=600>
+<img src="docs/Images/MainSettings.png" width=600>
 
 - **Wide open shots like skylines:** Use large values for **Far Importance** (800+) and small values for **Multiplier** (1-2).
 - **Narrow shots like selfies:** Use very small values for **Far Importance** (0.1 - 0.5) and large values for **Multiplier** (50-200).
@@ -53,7 +53,7 @@ Check the box next to LookinGlass, then use the sliders to achieve the desired d
 
 The blur settings can be used to "smooth out" sharp differences in the depth map.
 
-<img src="Doc/Images/BlurSettings.png" width=600>
+<img src="docs/Images/BlurSettings.png" width=600>
 
 There are three sliders that can be used to adjust the blur, but the defaults should work well for most screenshots.
 
@@ -63,19 +63,19 @@ The primary reason is to make life easier for HoloPlay Studio when recreating th
 
 In CyberPunk 2077, for example, the depth map often has holes and pixelation in areas like hair:
 
-<img src="Doc/Images/HairNoBlur.png">
+<img src="docs/Images/HairNoBlur.png">
 
 These wreak havoc when HoloPlay tries to recreate the 3D surface for the hair. Blurring the depth map fills in holes and smoothes out the pixelation.
 
-<img src="Doc/Images/HairBlur.png">
+<img src="docs/Images/HairBlur.png">
 
 It's also common in games for a subject to be close to the camera when the background is far away:
 
-<img src="Doc/Images/FaceNoBlur.png">
+<img src="docs/Images/FaceNoBlur.png">
 
 This again is *very* difficult for HoloPlay Studio. The sharp contrast between things that are close and things that are far causes tearing in the image. This tearing is especially visible when you view the scene from the sides. Blurring the depth map "rounds off" these sharp edges and creates a smooth transition from close to far.  
 
-<img src="Doc/Images/FaceBlur.png">
+<img src="docs/Images/FaceBlur.png">
 
 Smooth transition means far less tearing.
 
@@ -87,11 +87,11 @@ Here are some of the most common issues:
 
 Press the 'Edit global preprocessor definitions' button.
 
-<img src="Doc/Images/PreProcButton.png" width=600>
+<img src="docs/Images/PreProcButton.png" width=600>
 
 Change `RESHADE_DEPTH_INPUT_IS_REVERSED` from 0 to 1 or from 1 to 0
 
-<img src="Doc/Images/DeptheReversed.png" width=400>
+<img src="docs/Images/DeptheReversed.png" width=400>
 
 Then click somewhere else to leave the popup.
 
@@ -101,7 +101,7 @@ Then click somewhere else to leave the popup.
 
 Some games work best with a Multiplier of 1.0 or less. Other games, like Half-Life 2, only work with a multiplier of *exactly* 1.0.
 
-<img src="Doc/Images/EditMulti.png" width=600>
+<img src="docs/Images/EditMulti.png" width=600>
 
 #### MSAA
 
@@ -111,7 +111,7 @@ Multisample anti-aliasing (MSAA) is known to cause problems with ReShade depth. 
 
 Some games, like Half-Life 2, clear the depth buffer each time they clear the frame. ReShade offers a setting to make a full copy of the depth buffer before the frame is cleared. You can find this setting on the the last tab in ReShade. It's the tab with the name of the graphics API used by the game (e.g. **D3D9**, **DX11**).
 
-<img src="Doc/Images/CopyDepthBeforeClear.png">
+<img src="docs/Images/CopyDepthBeforeClear.png">
 
 ### Depth works in single player or campaign but not in online multiplayer
 
