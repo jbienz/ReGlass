@@ -54,7 +54,7 @@ The blur settings can be used to "smooth out" sharp differences in the depth map
 
 <img src="Images/BlurSettings.png" width=600>
 
-There are three sliders that can be used to adjust the blur, but the defaults should work well for most screenshots.
+There are three sliders that can be used to adjust the blur, but the defaults should work well for most games.
 
 #### Why blur the depth map at all?
 The primary reason is to make life easier for HoloPlay Studio when recreating the scene.
