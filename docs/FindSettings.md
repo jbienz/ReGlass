@@ -4,7 +4,7 @@ If you've already checked the [Game Settings](GameSettings.md) page and the [Gam
 ## Compatibility
 Before digging into settings it's best to verify that ReShade is compatible with your game. For that, visit the [ReShade Compatibility List][ReShadeCompat] and see if you can find your game. Note that this list isn't updated often, so if your game isn't listed it might still work. But if your game is in the list and there are depth issues, it may not be compatible with ReGlass.
 
-Here are some of the common depth issues and what to expect from them. The "Counted" vs "Not Counted" indicates whether I included games with this issue in the "500+ supported games".
+Here are some of the common depth issues and what to expect from them. "Counted" vs "Not Counted" indicates whether I included games with each issue in the "500+ supported games".
 
 - **No depth buffer access -** Everything will appear flat and in the background. (Not Counted)
 - **Depth buffer is empty -** Same as above. (Not Counted)
