@@ -6,7 +6,7 @@ This page includes the settings necessary to get ReGlass working with various ga
 <table>
   <colgroup>
     <col>
-    <col style="background-color:cyan">
+    <col>
 	<col style="background-color:magenta">
 	<col style="background-color:red">
 	<col style="background-color:green">
