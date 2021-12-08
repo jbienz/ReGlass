@@ -14,7 +14,7 @@ ReGlass draws the game with color on one side and depth on the other. If a scree
 ## Why ReShade?
 There are several reasons why [ReShade](https://reshade.me) was chosen:
 
-- ReShade works with a *massive* [list of games](https://reshade.me/compatibility), and more than 500 of them support depth.
+- ReShade works with a *massive* [list of games][ReShadeCompat], and more than 500 of them support depth.
 - ReShade has an incredible community with ~15k members and ~4k active at any given time.
 - The community is constantly adding new games, and if an update breaks an existing game it's addressed quickly.
 - ReShade is easy to develop on with many public samples.
@@ -87,3 +87,4 @@ Special thanks to Ioxa and Otakumouse for their [GaussianBlur shader](https://gi
 I'm not always online, but my user name is **eXntrc** on the [Looking Glass Discord](https://discord.com/invite/lookingglassfactory).
 
 [GameSettingsDisc]: https://github.com/jbienz/ReGlass/discussions/2 "Games Setting Discussion"
+[ReShadeCompat]: https://www.pcgamingwiki.com/wiki/ReShade#Compatibility_list "ReShade Compatibility List"

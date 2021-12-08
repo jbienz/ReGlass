@@ -72,4 +72,4 @@ When troubleshooting it can be helpful to turn OFF the **LookingGlass** shader a
 For additional help I recommend watching the [ReShade Depth Tutorial](https://www.youtube.com/watch?v=52KZrMOo4Y8) by Daemon White. Also, the [Depth Buffer Guide](https://github.com/martymcmodding/ReShade-Guide/wiki/The-Depth-Buffer) by martymcmodding is quite helpful. 
 
 [GameSettingsDisc]: https://github.com/jbienz/ReGlass/discussions/2 "Games Setting Discussion"
-[ReShadeCompat]: https://reshade.me/compatibility "ReShade Compatibility List"
+[ReShadeCompat]: https://www.pcgamingwiki.com/wiki/ReShade#Compatibility_list "ReShade Compatibility List"
