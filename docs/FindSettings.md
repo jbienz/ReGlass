@@ -2,9 +2,9 @@
 So you've already checked the [Game Settings](GameSettings.md) page and the [Game Settings Discussion][GameSettingsDisc], but the game you want to play isn't listed. Fear not! This page will help you determine the right settings for your game, and once you find them please don't forget to share them in the [Game Settings Discussion][GameSettingsDisc]!
 
 ## Compatibility
-Before digging into settings it's best to verify that ReShade is compatible with your game. For that, visit the [ReShade Compatibility List][ReShadeCompat] and see if you can find your game. Note that this list isn't updated often, so if your game isn't listed it might still work. But if your game is in the list with depth buffer issues, it probably isn't compatible with ReGlass.
+Before digging into settings it's best to verify that ReShade is compatible with your game. For that, visit the [ReShade Compatibility List][ReShadeCompat] and see if you can find your game. Note that this list isn't updated often, so if your game isn't listed it might still work. But if your game is in the list and there are depth issues, it may not be compatible with ReGlass.
 
-Below are some of the common depth issues and the behavior to expect from a game that has them. The "Counted" / "Not Counted" part indicates whether I allowed the issue in the "500+ supported games".
+Here are some of the common depth issues and what to expect from them. The "Counted" vs "Not Counted" indicates whether I included games with this issue in the "500+ supported games".
 
 - **No depth buffer access -** Everything will appear flat and in the background. (Not Counted)
 - **Depth buffer is empty -** Same as above. (Not Counted)
@@ -27,7 +27,7 @@ Now that you've verified your game is compatible, it's time to install ReGlass.
 ## Main Settings
 Now that ReGlass is installed, launch the game and press the 'Home' button on your keyboard to bring up the ReShade menu.
 
-Refer back to the home page for information on the [Depth Settings](index.md#depth-settings) and [Blur Settings](index.md#blur-settings). These should work mostly the same across all games.  
+Refer back to the home page for information on the [Depth Settings](index.md#depth-settings) and [Blur Settings](index.md#blur-settings). These settings should mostly work the same across all games.  
 
 ## Troubleshooting
 
@@ -59,7 +59,7 @@ Multisample anti-aliasing (MSAA) is known to cause problems with ReShade depth. 
 
 #### Depth buffer clearing
 
-Some games, like Half-Life 2, clear the depth buffer each time they clear the frame. ReShade offers a setting to make a full copy of the depth buffer before the frame is cleared. You can find this setting on the the last tab in ReShade. It's the tab with the name of the graphics API used by the game (e.g. **D3D9**, **DX11**).
+Some games, like Half-Life 2, clear the depth buffer each time they clear the frame. ReShade offers a setting to make a full copy of the depth buffer before the frame is cleared. You can find this setting on the the last tab in ReShade. It's the tab with the name of the graphics API used by the game (e.g. **D3D9**, **D3D11**).
 
 <img src="Images/CopyDepthBeforeClear.png">
 
