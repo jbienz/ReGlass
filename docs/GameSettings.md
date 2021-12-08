@@ -24,5 +24,5 @@ then use the popup to set these values.
 
 <img src="Images/GlobalSettings.png" width=400>
 
-[GameSettingsDisc]: https://github.com/jbienz/ReGlass/issues/1 "Games Setting Discussion"
+[GameSettingsDisc]: https://github.com/jbienz/ReGlass/discussions/2 "Games Setting Discussion"
 

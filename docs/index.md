@@ -85,3 +85,5 @@ Special thanks to Ioxa and Otakumouse for their [GaussianBlur shader](https://gi
 
 ## Questions?
 I'm not always online, but my user name is **eXntrc** on the [Looking Glass Discord](https://discord.com/invite/lookingglassfactory).
+
+[GameSettingsDisc]: https://github.com/jbienz/ReGlass/discussions/2 "Games Setting Discussion"
