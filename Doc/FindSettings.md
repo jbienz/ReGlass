@@ -27,42 +27,7 @@ Now that you've verified your game is compatible, it's time to install ReGlass.
 ## Main Settings
 Now that ReGlass is installed, launch the game and press the 'Home' button on your keyboard to bring up the ReShade menu.
 
-When you check the box next to LookingGlass, you'll see two main sliders that can be used to achieve the desired effect:
-
-<img src="Images/MainSettings.png" width=600>
-
-- **Wide open shots like skylines:** Use large values for **Far Importance** (800+) and small values for **Multiplier** (1-2).
-- **Narrow shots like selfies:** Use very small values for **Far Importance** (0.1 - 0.5) and large values for **Multiplier** (50-200).
-
-## Blur Settings
-
-The blur settings can be used to "smooth out" sharp differences in the depth map.
-
-<img src="Images/BlurSettings.png" width=600>
-
-There are three sliders that can be used to adjust the blur, but the defaults should work well for most screenshots.
-
-### Why blur the depth map at all?
-
-The primary reason is to make life easier for HoloPlay Studio when recreating the scene.
-
-In CyberPunk 2077, for example, the depth map often has holes and pixelation in areas like hair:
-
-<img src="Images/HairNoBlur.png">
-
-These wreak havoc when HoloPlay tries to recreate the 3D surface for the hair. Blurring the depth map fills in holes and smoothes out the pixelation.
-
-<img src="Images/HairBlur.png">
-
-It's also common in games for a subject to be close to the camera when the background is far away:
-
-<img src="Images/FaceNoBlur.png">
-
-This again is *very* difficult for HoloPlay Studio. The sharp contrast between things that are close and things that are far causes tearing in the image. This tearing is especially visible when you view the scene from the sides. Blurring the depth map "rounds off" these sharp edges and creates a smooth transition from close to far.  
-
-<img src="Images/FaceBlur.png">
-
-Smooth transition means far less tearing.
+Refer back to the home page for information on the [Depth Settings](index.md#depth-settings) and [Blur Settings](index.md#blur-settings). These should work mostly the same across all games.  
 
 ## Troubleshooting
 
