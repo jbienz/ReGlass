@@ -1,5 +1,5 @@
 # Find Game Settings
-If you've already checked the [Game Settings](GameSettings.md) page and the [Game Settings Discussion][GameSettingsDisc] but the game you want to play isn't listed, fear not! This page will help you determine the right settings for your game, and once you find them please don't forget to share them in the [Game Settings Discussion][GameSettingsDisc]!
+If you've already checked the [Game Settings](GameSettings.md) page and the [Game Settings Discussion][GameSettingsDisc] but the game you want to play isn't listed, fear not! This page will help you determine the right settings for your game. Once you find them, please don't forget to share them in the [Game Settings Discussion][GameSettingsDisc]!
 
 ## Compatibility
 Before digging into settings it's best to verify that ReShade is compatible with your game. For that, visit the [ReShade Compatibility List][ReShadeCompat] and see if you can find your game. Note that this list isn't updated often, so if your game isn't listed it might still work. But if your game is in the list and there are depth issues, it may not be compatible with ReGlass.
