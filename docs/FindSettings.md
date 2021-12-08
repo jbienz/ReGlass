@@ -17,9 +17,9 @@ Here are some of the common depth issues and what to expect from them. "Counted"
 - **XYZ (e.g. trees) missing from depth buffer -** Everything BUT XYZ will look OK. XYZ will appear flat and in the background. (Not Counted)
 - **Depth buffer access only in menu** - May or may not work depending on where the menu is displayed. When the shader is enabled only the center 50% of the screen is displayed. If the menu is on the left or right side, you might be OK. If it's in the middle of the screen, it'll be in the way. (Not Counted)  
 
-## API
 Now that you've verified your game is compatible, it's time to install ReGlass. 
 
+## API
 **API** selection happens during the ReShade installation for your game. Sometimes ReShade already knows the API and won't ask for this. If it does, just search the web to find out which Graphics API the game uses. 
 
 <img src="Images/APISelection.png" width=500>
@@ -30,11 +30,9 @@ Now that ReGlass is installed, launch the game and press the 'Home' button on yo
 Refer back to the home page for information on the [Depth Settings](index.md#depth-settings) and [Blur Settings](index.md#blur-settings). These settings should mostly work the same across all games.  
 
 ## Troubleshooting
-
 Here are some of the most common issues:
 
 ### Depth is always black or is inverted
-
 Press the 'Edit global preprocessor definitions' button.
 
 <img src="Images/PreProcButton.png" width=600>
