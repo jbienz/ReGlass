@@ -3,14 +3,14 @@ This page includes the settings necessary to get ReGlass working with various ga
 
 <table>
   <tr>
-    <td>**Game**</td>
-    <td width="12%">**API**</td>
-	<td width="12%">**Copy Before Clear**</td>
-	<td width="12%">**Upside Down**</td>
-	<td width="12%">**Reversed**</td>
-	<td width="12%">**Logarithmic**</td>
-	<td width="12%">**Far Importance**</td>
-	<td width="12%">**Multiplier**</td>
+    <th>Game</td>
+    <th width="12%">API</th>
+	<th width="12%">Copy Before Clear</th>
+	<th width="12%">Upside Down</th>
+	<th width="12%">Reversed</th>
+	<th width="12%">Logarithmic</th>
+	<th width="12%">Far Importance</th>
+	<th width="12%">Multiplier</th>
   </tr>
   <tr>
 	<td rowspan="2">Cyberpunk 2077</td>
@@ -23,7 +23,7 @@ This page includes the settings necessary to get ReGlass working with various ga
 	<td>0.1 - 200</td>
   </tr>
   <tr>
-    <td colspan="7">**Skylines:** Far Importance 800+, Multiplier 1-2. **Close-ups:** Far Importance 0.1-0.5, Multiplier 50-200.</td>
+    <td colspan="7"><b>Skylines:</b> Far Importance 800+, Multiplier 1-2. <b>Close-ups:</b> Far Importance 0.1-0.5, Multiplier 50-200.</td>
   </tr>
   <tr>
 	<td rowspan="2">Half-Life 2</td>
@@ -36,10 +36,10 @@ This page includes the settings necessary to get ReGlass working with various ga
 	<td>**1.0**</td>
   </tr>
   <tr>
-    <td colspan="7">Multiplier must be *exactly* **1.0** or the depth will always be white. This limits dynamic range.</td>
+    <td colspan="7">Multiplier must be <i>exactly</i> <b>1.0</b> or the depth will always be white. This limits dynamic range.</td>
   </tr>
   <tr>
-	<td rowspan="2">Halo: The Master Chief Collection</td>
+	<td rowspan="2">Halo Master Chief Collection</td>
 	<td>D3D11</td>
 	<td>Off</td>
 	<td>0</td>
