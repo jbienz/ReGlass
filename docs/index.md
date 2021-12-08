@@ -46,8 +46,8 @@ Check the box next to LookingGlass, then use the sliders to achieve the desired 
 
 <img src="Images/MainSettings.png" width=600>
 
-- **Wide open shots like skylines:** Use large values for **Far Importance** (800+) and small values for **Multiplier** (1-2).
-- **Narrow shots like selfies:** Use very small values for **Far Importance** (0.1 - 0.5) and large values for **Multiplier** (50-200).
+- **Wide open shots like skylines:** Use high values for **Far Importance** and low values for **Multiplier**.
+- **Close-up shots like selfies:** Use very low values for **Far Importance** and high values for **Multiplier**.
 
 ### Blur Settings
 The blur settings can be used to "smooth out" sharp differences in the depth map.
