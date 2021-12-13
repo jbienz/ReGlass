@@ -5,7 +5,7 @@ ReGlass is a 3D screenshot and video capture tool for [Looking Glass Portrait](h
 [Watch the video](https://youtu.be/YKgHC-UgFOY)
 
 
-# How does it work?
+# How Does it Work?
 ReGlass draws the game with color on one side and depth on the other. If a screenshot is taken or a video captured, it can be imported into [HoloPlay Studio](https://docs.lookingglassfactory.com/3d-viewers/holoplay-studio) as a [RGB-D Photo or Video](https://docs.lookingglassfactory.com/3d-viewers/holoplay-studio/rgbd-photo-video). 
 
 **NOTE:** When taking screenshots or capturing video, don't use screenshot or capture facilities built into the game. This is because the game isn't aware of ReShade and won't include the depth information. Instead, use the screenshot feature in ReShade (usually PrintScreen) or external tools like the Windows Game Bar (Win + G) or NVIDIA Overlay (Alt + Z).
@@ -91,11 +91,15 @@ First, start with the [Game Settings](GameSettings.md) page to see if your game 
 ## Thanks
 Special thanks to Ioxa and Otakumouse for their [GaussianBlur shader](https://github.com/Otakumouse/stormshade/blob/master/v4.X/reshade-shaders/Shader%20Library/Recommended/GaussianBlur.fx), which was modified and embedded in this shader to enable blurring the depth map.
 
-## Questions?
-I'm not always online, but my user name is **eXntrc** on the [Looking Glass Discord](https://discord.com/invite/lookingglassfactory).
+## About the Author
+Jared Bienz
+<img src="Images/JBienz.jpg" width=200>
+[<img src="Images/LILogo.png" width=24> jbienz](https://www.linkedin.com/in/jbienz) &nbsp; [<img src="Images/WebLogo.png" width=24> Road to MR](https://www.roadtomr.com) &nbsp; [<img src="Images/WebLogo.png" width=24> Blog](https://jared.bienz.com) &nbsp; [<img src="Images/TwitLogo.png" width=24> @jbienz](https://twitter.com/jbienz)
 
-[GameSettingsDisc]: https://github.com/jbienz/ReGlass/discussions/2 "Games Setting Discussion"
-[ReShadeCompat]: https://www.pcgamingwiki.com/wiki/ReShade#Compatibility_list "ReShade Compatibility List"
+I'm not always online, but my user name is **eXntrc** on the [Looking Glass Discord](https://discord.com/invite/lookingglassfactory).
 
 
 <sub>**No Express or Implied Warranty.** This software is provided "as is", with all faults. There are no warranties or guarantees, express or implied.</sub>
+
+[GameSettingsDisc]: https://github.com/jbienz/ReGlass/discussions/2 "Games Setting Discussion"
+[ReShadeCompat]: https://www.pcgamingwiki.com/wiki/ReShade#Compatibility_list "ReShade Compatibility List"
