@@ -91,12 +91,11 @@ First, start with the [Game Settings](GameSettings.md) page to see if your game 
 ## Thanks
 Special thanks to Ioxa and Otakumouse for their [GaussianBlur shader](https://github.com/Otakumouse/stormshade/blob/master/v4.X/reshade-shaders/Shader%20Library/Recommended/GaussianBlur.fx), which was modified and embedded in this shader to enable blurring the depth map.
 
-## Legal
-
-**No Express or Implied Warranty.** This software is provided "as is", with all faults. There are no warranties or guarantees, express or implied.
-
 ## Questions?
 I'm not always online, but my user name is **eXntrc** on the [Looking Glass Discord](https://discord.com/invite/lookingglassfactory).
 
 [GameSettingsDisc]: https://github.com/jbienz/ReGlass/discussions/2 "Games Setting Discussion"
 [ReShadeCompat]: https://www.pcgamingwiki.com/wiki/ReShade#Compatibility_list "ReShade Compatibility List"
+
+
+<sub>**No Express or Implied Warranty.** This software is provided "as is", with all faults. There are no warranties or guarantees, express or implied.</sub>
