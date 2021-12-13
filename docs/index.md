@@ -94,7 +94,7 @@ Special thanks to Ioxa and Otakumouse for their [GaussianBlur shader](https://gi
 ## About the Author
 Jared Bienz
 <img src="Images/JBienz.jpg" width=200>
-[<img src="Images/LILogo.png" width=24> jbienz](https://www.linkedin.com/in/jbienz) &nbsp; [<img src="Images/WebLogo.png" width=24> Road to MR](https://www.roadtomr.com) &nbsp; [<img src="Images/WebLogo.png" width=24> Blog](https://jared.bienz.com) &nbsp; [<img src="Images/TwitLogo.png" width=24> @jbienz](https://twitter.com/jbienz)
+[<img src="Images/LILogo.png" width=24>jbienz](https://www.linkedin.com/in/jbienz) &nbsp; [<img src="Images/WebLogo.png" width=24>Road to MR](https://www.roadtomr.com) &nbsp; [<img src="Images/WebLogo.png" width=24>Blog](https://jared.bienz.com) &nbsp; [<img src="Images/TwitLogo.png" width=24>@jbienz](https://twitter.com/jbienz)
 
 I'm not always online, but my user name is **eXntrc** on the [Looking Glass Discord](https://discord.com/invite/lookingglassfactory).
 
