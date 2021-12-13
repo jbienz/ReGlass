@@ -77,6 +77,14 @@ This again is *very* difficult for HoloPlay Studio. The sharp contrast between t
 
 Smooth transition means far less tearing.
 
+### Performance Mode
+**Performance Mode** can be toggled at the bottom of the ReShade menu:
+
+<img src="Images/PerformanceMode.png" width=600>
+
+When **Performance Mode** is enabled you won't be able to adjust any of the settings above, but in some games it might achieve an additional 15+ frames per second.
+
+
 ## How do I make it work with XYZ game?
 First, start with the [Game Settings](GameSettings.md) page to see if your game is already listed. Next, check the [Game Settings Discussion][GameSettingsDisc] thread. Finally, see the [Find Settings](FindSettings.md) page to learn how to configure ReGlass for a new game.
 

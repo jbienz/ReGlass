@@ -48,7 +48,7 @@ This page includes the settings necessary to get ReGlass working with various ga
 	<td><b>1.0</b></td>
   </tr>
   <tr>
-    <td colspan="7">Multiplier must be <i>exactly</i> <b>1.0</b> or the depth will always be white. Because of this, HL2 has somewhat limited dynamic range.</td>
+    <td colspan="7">Multiplier must be <i>exactly</i> <b>1.0</b> or the depth will always be white. Because of this, HL2 has somewhat limited dynamic range. You'll need to compensate for this in HoloPlay or ReGlass with depthiness.</td>
   </tr>
   <tr>
 	<td rowspan="2">Halo Master Chief Collection</td>
@@ -62,6 +62,19 @@ This page includes the settings necessary to get ReGlass working with various ga
   </tr>
   <tr>
     <td colspan="7">Start the game with mods enabled and play in offline mode.</td>
+  </tr>
+  <tr>
+	<td rowspan="2">Portal 2</td>
+	<td>D3D9</td>
+	<td>On</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>2.0 - 4.5</td>
+	<td><b>1.0</b></td>
+  </tr>
+  <tr>
+    <td colspan="7">Multiplier must be <i>exactly</i> <b>1.0</b> or the depth will always be white. Far importance is also limited in range. You'll need to compensate for this in HoloPlay or ReGlass with depthiness.</td>
   </tr>
 </table>
 
