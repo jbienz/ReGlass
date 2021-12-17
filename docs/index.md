@@ -1,12 +1,16 @@
 # ReGlass
 ReGlass is a 3D screenshot and video capture tool for [Looking Glass Portrait](https://lookingglassfactory.com/portrait). It works with more than 500 games.
 
+**UPDATE:** You can now play all of the games supported by ReGlass as real-time moving holograms! 
+
+[Check out Refract today!](https://solersoft.github.io/Refract) 
+
 [![](Images/VideoPreview.png)](https://youtu.be/YKgHC-UgFOY)
 [Watch the video](https://youtu.be/YKgHC-UgFOY)
 
 
 # How Does it Work?
-ReGlass draws the game with color on one side and depth on the other. If a screenshot is taken or a video captured, it can be imported into [HoloPlay Studio](https://docs.lookingglassfactory.com/3d-viewers/holoplay-studio) as a [RGB-D Photo or Video](https://docs.lookingglassfactory.com/3d-viewers/holoplay-studio/rgbd-photo-video). 
+ReGlass draws the game with color on one side and depth on the other. If a screenshot is taken or a video captured, it can be imported into [Holoplay Studio](https://docs.lookingglassfactory.com/3d-viewers/holoplay-studio) as a [RGB-D Photo or Video](https://docs.lookingglassfactory.com/3d-viewers/holoplay-studio/rgbd-photo-video). 
 
 **NOTE:** When taking screenshots or capturing video, don't use screenshot or capture facilities built into the game. This is because the game isn't aware of ReShade and won't include the depth information. Instead, use the screenshot feature in ReShade (usually PrintScreen) or external tools like the Windows Game Bar (Win + G) or NVIDIA Overlay (Alt + Z).
 
@@ -57,13 +61,13 @@ The blur settings can be used to "smooth out" sharp differences in the depth map
 There are three sliders that can be used to adjust the blur, but the defaults should work well for most games.
 
 #### Why blur the depth map at all?
-The primary reason is to make life easier for HoloPlay Studio when recreating the scene.
+The primary reason is to make life easier for Holoplay and Refract when recreating the scene.
 
 In CyberPunk 2077, for example, the depth map often has holes and pixelation in areas like hair:
 
 <img src="Images/HairNoBlur.png">
 
-These wreak havoc when HoloPlay tries to recreate the 3D surface for the hair. Blurring the depth map fills in holes and smoothes out the pixelation.
+These wreak havoc when Holoplay or Refract try to recreate the 3D surface for the hair. Blurring the depth map fills in holes and smoothes out the pixelation.
 
 <img src="Images/HairBlur.png">
 
@@ -71,7 +75,7 @@ It's also common in games for a subject to be close to the camera when the backg
 
 <img src="Images/FaceNoBlur.png">
 
-This again is *very* difficult for HoloPlay Studio. The sharp contrast between things that are close and things that are far causes tearing in the image. This tearing is especially visible when you view the scene from the sides. Blurring the depth map "rounds off" these sharp edges and creates a smooth transition from close to far.  
+This again is *very* difficult for Holoplay and Refract. The sharp contrast between things that are close and things that are far causes tearing in the image. This tearing is especially visible when you view the scene from the sides. Blurring the depth map "rounds off" these sharp edges and creates a smooth transition from close to far.  
 
 <img src="Images/FaceBlur.png">
 
