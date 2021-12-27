@@ -35,7 +35,7 @@ Some games work best with a Multiplier of 1.0 or less. Other games, like Half-Li
 
 #### MSAA
 
-Multisample anti-aliasing (MSAA) is known to cause problems with ReShade depth. If your game supports MSAA, try turning it off.
+Multi-Sample Anti-Aliasing (MSAA) is known to cause problems with ReShade depth. If your game uses MSAA, it's best to turn it off. Some games don't provide an option to disable MSAA specifically, but lowering the quality settings may turn it off. You can check to see if the game is using MSAA by looking on the last tab in ReShade (the tab with the name of the graphics API). If you see the text "(MSAA)" at the end of any buffer, MSAA is in use. 
 
 ### Depth works in single player or campaign but not in online multiplayer
 
