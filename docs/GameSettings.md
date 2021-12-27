@@ -1,5 +1,7 @@
 # Game Settings
-This page includes the settings necessary to get ReGlass working with various games. If the game you want to play isn't listed, check the [Game Settings Discussion][GameSettingsDisc] to see if anyone has it working. Finally, you can visit the [Find Settings](FindSettings.md) page to learn how to configure a new game yourself.
+This page includes the settings necessary to get ReGlass working with various games. 
+
+Is your game not listed? Check the [Game Settings Discussion][GameSettingsDisc] or the [Find Settings](FindSettings.md) page to learn how to find them.
 
 ## Games
 
