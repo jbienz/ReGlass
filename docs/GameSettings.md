@@ -40,6 +40,19 @@ Is your game not listed? Check the [Game Settings Discussion][GameSettingsDisc] 
     <td colspan="7"><b>Skylines:</b> Far Importance 800+, Multiplier 1 - 2. <b>Close-ups:</b> Far Importance 0.2 - 0.5, Multiplier 50 - 200.</td>
   </tr>
   <tr>
+	<td rowspan="2">DOTA 2</td>
+	<td>D3D10/11/12</td>
+	<td>On</td>
+	<td>0</td>
+	<td>0</td>
+	<td>0</td>
+	<td>100 - 1000</td>
+	<td>1.0</td>
+  </tr>
+  <tr>
+    <td colspan="7">Multiplier must be exactly 1.0 Far importance of 200 generally works well.</td>
+  </tr>
+  <tr>
 	<td rowspan="2">Half-Life 2</td>
 	<td>D3D9</td>
 	<td>On</td>
