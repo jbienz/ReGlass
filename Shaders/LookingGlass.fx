@@ -79,7 +79,7 @@ uniform float fUIDepthMultiplier <
   ui_label = "Multiplier";
   ui_tooltip = "RESHADE_DEPTH_MULTIPLIER=<value>";
   ui_min = 0.0; ui_max = 1000.0;
-  ui_step = 0.1;
+  ui_step = 0.01;
 > = 2;
 
 uniform int GaussianBlurRadius <
@@ -105,6 +105,14 @@ uniform float GaussianBlurOffset <
   ui_min = 0.00; ui_max = 2.00;
   ui_step = 0.001;
 > = 0.5;
+
+uniform float XOffset <
+  ui_type = "drag";
+  ui_label = "X Offset";
+  ui_tooltip = "Can be use to X position.";
+  ui_min = -1.00; ui_max = 1.00;
+  ui_step = 0.001;
+> = 0.0;
 
 // -- Variables --
 
@@ -295,7 +303,7 @@ float GetLinearizedDepth(float2 texcoord)
   if (RESHADE_DEPTH_INPUT_IS_UPSIDE_DOWN)
     texcoord.y = 1.0 - texcoord.y;
 
-  float depth = tex2Dlod(ReShade::DepthBuffer, float4(texcoord, 0, 0)).x * fUIDepthMultiplier;
+  float depth = tex2Dlod(ReShade::DepthBuffer, float4(texcoord, 0, 0)).x;
 
   const float C = 0.01;
   if (RESHADE_DEPTH_INPUT_IS_LOGARITHMIC)
@@ -306,6 +314,7 @@ float GetLinearizedDepth(float2 texcoord)
 
   const float N = 1.0;
   depth /= fUIFarPlane - depth * (fUIFarPlane - N);
+  depth = clamp(depth * fUIDepthMultiplier, 0.0, 1.0);
 
   return depth;
 }
@@ -321,13 +330,13 @@ void CenterView(inout float4 position : SV_Position, inout float2 texcoord : TEX
   // Force to use the left side of the view only
   if (position.x <= half_buffer)
   {
-    position.x = position.x + quarter_buffer;
-    texcoord.x = texcoord.x + 0.25;
+    position.x = position.x + (quarter_buffer * (XOffset + 1));
+    texcoord.x = texcoord.x + (0.25 * (XOffset + 1));
   }
   else
   {
-    position.x = (position.x - half_buffer) + quarter_buffer;
-    texcoord.x = (texcoord.x - 0.5) + 0.25;
+    position.x = (position.x - half_buffer) + (quarter_buffer * (XOffset + 1));
+    texcoord.x = (texcoord.x - 0.5) + (0.25 * (XOffset + 1));
   }
 }
 
