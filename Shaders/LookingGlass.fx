@@ -136,7 +136,7 @@ float3 GaussianBlurFinal(in float4 pos : SV_Position, in float2 texcoord : TEXCO
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 4; ++i)
     {
       color += tex2D(GaussianBlurSampler, texcoord + float2(0.0, offset[i] * ReShade::PixelSize.y) * GaussianBlurOffset).rgb * weight[i];
@@ -151,7 +151,7 @@ float3 GaussianBlurFinal(in float4 pos : SV_Position, in float2 texcoord : TEXCO
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 6; ++i)
     {
       color += tex2D(GaussianBlurSampler, texcoord + float2(0.0, offset[i] * ReShade::PixelSize.y) * GaussianBlurOffset).rgb * weight[i];
@@ -166,7 +166,7 @@ float3 GaussianBlurFinal(in float4 pos : SV_Position, in float2 texcoord : TEXCO
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 11; ++i)
     {
       color += tex2D(GaussianBlurSampler, texcoord + float2(0.0, offset[i] * ReShade::PixelSize.y) * GaussianBlurOffset).rgb * weight[i];
@@ -181,7 +181,7 @@ float3 GaussianBlurFinal(in float4 pos : SV_Position, in float2 texcoord : TEXCO
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 15; ++i)
     {
       color += tex2D(GaussianBlurSampler, texcoord + float2(0.0, offset[i] * ReShade::PixelSize.y) * GaussianBlurOffset).rgb * weight[i];
@@ -196,7 +196,7 @@ float3 GaussianBlurFinal(in float4 pos : SV_Position, in float2 texcoord : TEXCO
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 18; ++i)
     {
       color += tex2D(GaussianBlurSampler, texcoord + float2(0.0, offset[i] * ReShade::PixelSize.y) * GaussianBlurOffset).rgb * weight[i];
@@ -225,7 +225,7 @@ float3 GaussianBlur1(in float4 pos : SV_Position, in float2 texcoord : TEXCOORD)
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 4; ++i)
     {
       color += tex2D(ReShade::BackBuffer, texcoord + float2(offset[i] * ReShade::PixelSize.x, 0.0) * GaussianBlurOffset).rgb * weight[i];
@@ -240,7 +240,7 @@ float3 GaussianBlur1(in float4 pos : SV_Position, in float2 texcoord : TEXCOORD)
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 6; ++i)
     {
       color += tex2D(ReShade::BackBuffer, texcoord + float2(offset[i] * ReShade::PixelSize.x, 0.0) * GaussianBlurOffset).rgb * weight[i];
@@ -255,7 +255,7 @@ float3 GaussianBlur1(in float4 pos : SV_Position, in float2 texcoord : TEXCOORD)
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 11; ++i)
     {
       color += tex2D(ReShade::BackBuffer, texcoord + float2(offset[i] * ReShade::PixelSize.x, 0.0) * GaussianBlurOffset).rgb * weight[i];
@@ -270,7 +270,7 @@ float3 GaussianBlur1(in float4 pos : SV_Position, in float2 texcoord : TEXCOORD)
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 15; ++i)
     {
       color += tex2D(ReShade::BackBuffer, texcoord + float2(offset[i] * ReShade::PixelSize.x, 0.0) * GaussianBlurOffset).rgb * weight[i];
@@ -285,7 +285,7 @@ float3 GaussianBlur1(in float4 pos : SV_Position, in float2 texcoord : TEXCOORD)
 
     color *= weight[0];
 
-    [loop]
+    [unroll]
     for(int i = 1; i < 18; ++i)
     {
       color += tex2D(ReShade::BackBuffer, texcoord + float2(offset[i] * ReShade::PixelSize.x, 0.0) * GaussianBlurOffset).rgb * weight[i];
