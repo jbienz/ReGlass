@@ -313,8 +313,9 @@ float GetLinearizedDepth(float2 texcoord)
     depth = 1.0 - depth;
 
   const float N = 1.0;
+  depth = depth * fUIDepthMultiplier;
   depth /= fUIFarPlane - depth * (fUIFarPlane - N);
-  depth = clamp(depth * fUIDepthMultiplier, 0.0, 1.0);
+  depth = clamp(depth, 0.0, 1.0);
 
   return depth;
 }
