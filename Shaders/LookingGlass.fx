@@ -71,7 +71,7 @@ uniform float fUIFarPlane <
   ui_label = "Far Importance";
   ui_tooltip = "How much importance is given to objects that are far away.\n";
   ui_min = 0.0; ui_max = 1000.0;
-  ui_step = 0.1;
+  ui_step = 0.01;
 > = 200;
 
 uniform float fUIDepthMultiplier <
@@ -79,7 +79,7 @@ uniform float fUIDepthMultiplier <
   ui_label = "Multiplier";
   ui_tooltip = "RESHADE_DEPTH_MULTIPLIER=<value>";
   ui_min = 0.0; ui_max = 1000.0;
-  ui_step = 0.01;
+  ui_step = 0.005;
 > = 2;
 
 uniform int GaussianBlurRadius <
@@ -315,6 +315,9 @@ float GetLinearizedDepth(float2 texcoord)
   const float N = 1.0;
   depth = depth * fUIDepthMultiplier;
   depth /= fUIFarPlane - depth * (fUIFarPlane - N);
+  const float fMaxDepth = (1.0 * fUIDepthMultiplier) / (fUIFarPlane - 1.0 * (fUIFarPlane - N));
+  if (fMaxDepth > 1.0)
+    depth /= fMaxDepth;  // fit to [0.0, 1.0]
   depth = clamp(depth, 0.0, 1.0);
 
   return depth;
