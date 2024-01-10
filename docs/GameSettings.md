@@ -89,7 +89,7 @@ Is your game not listed? Check the [Game Settings Discussion][GameSettingsDisc] 
 	<td><b>1.0</b></td>
   </tr>
   <tr>
-    <td colspan="7">Multiplier must be <i>exactly</i> <b>1.0</b> or the depth will always be white. Far Importance is also limited in range. You'll need to compensate for this in HoloPlay or Refract with depthiness.</td>
+    <td colspan="7">Be sure to enable Multiplier must be <i>exactly</i> <b>1.0</b> or the depth will always be white. Far Importance is also limited in range. You'll need to compensate for this in HoloPlay or Refract with depthiness.</td>
   </tr>
 </table>
 
@@ -99,9 +99,9 @@ Is your game not listed? Check the [Game Settings Discussion][GameSettingsDisc] 
 <img src="Images/APISelection.png" width=500>
 
 ## Copy Before Clear
-**Copy Before Clear** is set on the the last tab in ReShade. This tab will have the same name as the API (for example **D3D9**, **D3D11**, etc.)
-
 <img src="Images/CopyDepthBeforeClear.png">
+
+**Copy Before Clear** is now set on the **Addons** tab in ReShade rather than the engine tab (which no longer exists).
 
 ## Upside Down, Reversed, Logarithmic
 To change **Upside Down**, **Reversed** or **Logarithmic**, click *Edit global preprocessor definitions*,
